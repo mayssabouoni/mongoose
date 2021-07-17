@@ -15,12 +15,12 @@ mongoose
   .then(console.log("DB is connected"));
 
 // Create a person with this prototype:
-let personSchema = new mongoose.Schema({
+const personSchema = new mongoose.Schema({
   name: { type: String, required: true },
   age: Number,
   favoriteFoods: [String],
 });
-let Person = mongoose.model("Person", personSchema);
+const Person = mongoose.model("Person", personSchema);
 
 //Create and Save a Record of a Model:
 const person=new Persons({
